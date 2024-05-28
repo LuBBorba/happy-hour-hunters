@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+# Project Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Happy Hour Hunters
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+## What is your app? Brief description in a couple of sentences.
 
-### `npm start`
+Happy Hour Hunters is an app that helps users find the best happy hour deals in Vancouver. By allowing users to search for deals based on the day of the week and the time they plan to go out, the app consolidates information from various venues to help users save time and money.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Problem
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Why is your app needed? Background information around any pain points or other reasons.
 
-### `npm test`
+Finding happy hour deals in Vancouver is currently a hard task. Users often have to visit multiple websites to check menus, happy hour timings, and offers, which can be time-consuming and frustrating. Happy Hour Hunters aims to solve this problem by providing a centralized platform where users can easily find up-to-date information on happy hour deals in Vancouver.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### User Profile
 
-### `npm run build`
+## Who will use your app? How will they use it? Any special considerations that your app must take into account.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Primary Users: Vancouver residents who enjoy going out and are looking to save money by taking advantage of happy hour deals.
+Secondary Users: Visitors to Vancouver looking for the best local deals during happy hour.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe _how_ these features are implemented, only _what_ needs to be implemented.
 
-### `npm run eject`
+As a user, I want to find places that offer happy hour discounts.
+As a user, I want to search by the day of the week.
+As a user, I want to search by the time I plan to visit the venue.
+As a user, I want to see the price of drinks or appetizers during happy hour.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Implementation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Tech Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Frontend: React, JavaScript, CSS (Sass)
+Libraries: react-router, axios, sass,
+Backend: Node.js, Express, MySQL
+Libraries: express, dotenv, cors, knex
+Database: MySQL
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### APIs
 
-## Learn More
+## List any external sources of data that will be used in your app.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+No external APIs will be used for the initial implementation. The app will use a custom MySQL database.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Sitemap
 
-### Code Splitting
+## List the pages of your app with brief descriptions. You can show this visually, or write it out.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This app will have one page with two dropdown menus. Depending on what the user selects, cards with the details about a place will show up on the screen.
 
-### Analyzing the Bundle Size
+### Mockups
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Home page of the app](./src/assets/images/home-page.png)
+![Deals page](./src/assets/images/deals-page.png)
 
-### Making a Progressive Web App
+### Data
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+My database will have two tables with the information below:
 
-### Advanced Configuration
+Places
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+-id (primary key)
+-name
+-address
+-contact info
+-website
 
-### Deployment
+Deals
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+-id (primary key)
+-place id (foreign key(placeid))
+-day of week
+-start time
+-end time
+-item
+-price
 
-### `npm run build` fails to minify
+### Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+List endpoints that your server will implement, including HTTP methods, parameters, and example responses.
+
+GET /deals
+-Fetch happy hour deals based on selected time and day.
+
+Parameters:
+-time: selected time as a sting. Ex: 6pm
+-day: selected day of the week as a string. ex: Tuesday
+
+I imagine that the response will be something like this:
+
+[
+{
+"id": 1,
+"placeName": "Cactus Club Yaletown",
+"items": [
+{
+"name": "Beer",
+"price": 5
+},
+{
+"name": "Fries",
+"price": 7
+}
+],
+"time": "5:00 PM - 7:00 PM",
+"day": "Monday, Tuesday, Wednesday, Thursday"
+},
+...
+]
+
+### Auth
+
+## Does your project include any login or user profile functionality? If so, describe how authentication/authorization will be implemented.
+
+There won't be user profile functionality.
+
+## Roadmap
+
+May 29 - June 2 -
+Initialize React app, create Express server, design database schema and create migrations and seed data.
+Create dropdown menus and card display, implement search functionality with dropdow menus on the fron end
+June 3 - 5:
+Develop the GET /deals endpoint to fetch deals based on user selection.
+Integrate the backend endpoint with the frontend dropdown menus, test data to nsure correct display on the frontend.
+Style the search page and results "page" using Sass.
+Day 6 -9:
+Ensure the app is responsive and looks good on different screen sizes.
+Implement error handling and loading states on the frontend.
+Test the search functionality and deal display.
+Final test and quality assurance
+
+## Nice-to-haves
+
+Your project will be marked based on what you committed to in the above document. Under nice-to-haves, you can list any additional features you may complete if you have extra time, or after finishing.
+
+- Dropdown by neighborhood
+- Pinpoint the places in a map
+- Create a POST method where restaurants add their menu in the app
+- Create a POST method where users can review the places.
