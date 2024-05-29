@@ -6,7 +6,7 @@ Happy Hour Hunters
 
 ## What is your app? Brief description in a couple of sentences.
 
-Happy Hour Hunters is an app that helps users find the best happy hour deals in Vancouver. By allowing users to search for deals based on the day of the week and the time they plan to go out, the app consolidates information from various venues to help users save time and money.
+Happy Hour Hunters is an app that helps users find the best happy hour deals in Vancouver. By allowing users to search for deals based on the day of the week, the app consolidates information from various venues to help users save time and money.
 
 ### Problem
 
@@ -27,7 +27,6 @@ List the functionality that your app will include. These can be written as user 
 
 As a user, I want to find places that offer happy hour discounts.
 As a user, I want to search by the day of the week.
-As a user, I want to search by the time I plan to visit the venue.
 As a user, I want to see the price of drinks or appetizers during happy hour.
 
 ## Implementation
@@ -50,11 +49,11 @@ No external APIs will be used for the initial implementation. The app will use a
 
 ## List the pages of your app with brief descriptions. You can show this visually, or write it out.
 
-This app will have one page with two dropdown menus. Depending on what the user selects, cards with the details about a place will show up on the screen.
+This app will have one page with a dropdown menu. Depending on the day of the week that the user selects, cards with the details about a place will show up on the screen.
 
 ### Mockups
 
-![Home page of the app](./src/assets/images/home-page.png)
+![Home page of the app](./src/assets/images/homepage.png)
 ![Deals page](./src/assets/images/deals-page.png)
 
 ### Data
@@ -74,8 +73,7 @@ Deals
 -id (primary key)
 -place id (foreign key(placeid))
 -day of week
--start time
--end time
+-start and end time
 -item
 -price
 
@@ -84,10 +82,9 @@ Deals
 List endpoints that your server will implement, including HTTP methods, parameters, and example responses.
 
 GET /deals
--Fetch happy hour deals based on selected time and day.
+-Fetch happy hour deals based on selected day.
 
 Parameters:
--time: selected time as a sting. Ex: 6pm
 -day: selected day of the week as a string. ex: Tuesday
 
 I imagine that the response will be something like this:
@@ -122,10 +119,10 @@ There won't be user profile functionality.
 
 May 29 - June 2 -
 Initialize React app, create Express server, design database schema and create migrations and seed data.
-Create dropdown menus and card display, implement search functionality with dropdow menus on the fron end
+Create dropdown menu and card display, implement search functionality with dropdown menus on the front end
 June 3 - 5:
 Develop the GET /deals endpoint to fetch deals based on user selection.
-Integrate the backend endpoint with the frontend dropdown menus, test data to nsure correct display on the frontend.
+Integrate the backend endpoint with the frontend dropdown menus, test data to ensure correct display on the frontend.
 Style the search page and results "page" using Sass.
 Day 6 -9:
 Ensure the app is responsive and looks good on different screen sizes.
@@ -137,6 +134,7 @@ Final test and quality assurance
 
 Your project will be marked based on what you committed to in the above document. Under nice-to-haves, you can list any additional features you may complete if you have extra time, or after finishing.
 
+- Dropdown by time
 - Dropdown by neighborhood
 - Pinpoint the places in a map
 - Create a POST method where restaurants add their menu in the app
