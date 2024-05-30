@@ -53,8 +53,8 @@ This app will have one page with a dropdown menu. Depending on the day of the we
 
 ### Mockups
 
-![Home page of the app](./src/assets/images/homepage.png)
-![Deals page](./src/assets/images/deals-page.png)
+![Home page of the app](./client/src/assets/mockups/homepage.png)
+![Deals page](./client/src/assets/mockups/deals-page.png)
 
 ### Data
 
