@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <img class="logo">
+    </header>
+    <div class="hero"></div>
+    <main>
+        <section class="search" >
+            <h1 class="search__header">You`re in for a treat! Find out the best deals for the happiest time of the day</h1>
+            <form class="form" id="form" onSubmit={e => e.preventDefault()}>
+                <label class="form__label" htmlFor="daySelect">Select a Day:</label>
+                <select id="daySelect" value={day} onChange={e => setDay(e.target.value)}>
+                <option class="form__option" value="monday">Monday</option>
+                <option class="form__option" value="tuesday">Tuesday</option>
+                <option class="form__option" value="wednesday">Wednesday</option>
+                <option class="form__option" value="thursday">Thursday</option>
+                <option class="form__option" value="friday">Friday</option>
+                <option class="form__option" value="saturday">Saturday</option>
+                <option class="form__option" value="sunday">Sunday</option>
+                </select>
+                <button class="form__button" type="button" onClick={handleSearch}>Search</button>
+            </form>          
+
+        </section>
+        <section class="card">
+            <div class="card__box">
+                <h2>Name of the Place</h2>
+                <Address><Address>
+                <p>website</p>
+                <h3>HH Time</h3>
+                <h4>Drinks</h4>
+                <ul>
+                    <li></li>
+                </ul>
+                <h4>Food</h4>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+        
+    </main>
+</body>
+</html>
