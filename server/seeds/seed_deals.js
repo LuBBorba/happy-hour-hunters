@@ -69,7 +69,6 @@ exports.seed = function(knex) {
                     }
                 ])
             },
-            
             {
                 id: 3,
                 place_id: 3,
@@ -122,8 +121,8 @@ exports.seed = function(knex) {
                         type: 'food'
                     },
                     {
-                        price: '$22', 
-                        product: 'Smoked salmon flatbread',
+                        price: '$16',
+                        product: 'Calamari',
                         type: 'food'
                     },
                     {
@@ -132,10 +131,11 @@ exports.seed = function(knex) {
                         type: 'food'
                     },
                     {
-                        price: '$16',
-                        product: 'Calamari',
+                        price: '$22', 
+                        product: 'Smoked salmon flatbread',
                         type: 'food'
-                    }
+                    }                   
+                    
                 ])
             },
             {
@@ -151,13 +151,13 @@ exports.seed = function(knex) {
                         type: 'drink'
                     },
                     {
-                        price: '$23', 
-                        product: 'Cocktail pitchers',
+                        price: '$2 off',
+                        product: 'Classic cocktails and all wines by the glass(6oz)',
                         type: 'drink'
                     },
                     {
-                        price: '$2 off',
-                        product: 'Classic cocktails and all wines by the glass(6oz)',
+                        price: '$23', 
+                        product: 'Cocktail pitchers',
                         type: 'drink'
                     }
                 ])
@@ -301,8 +301,8 @@ exports.seed = function(knex) {
                         type: 'drink'
                     },
                     {
-                        price: '$14',
-                        product: 'Cocktails on tap',
+                        price: '$8/$12',
+                        product: '5oz/8oz red, whine & rose wine',
                         type: 'drink'
                     },
                     {
@@ -311,10 +311,10 @@ exports.seed = function(knex) {
                         type: 'drink'
                     },
                     {
-                        price: '$8/$12',
-                        product: '5oz/8oz red, whine & rose wine',
+                        price: '$14',
+                        product: 'Cocktails on tap',
                         type: 'drink'
-                    },
+                    },                    
                     {
                         price: '$9',
                         product: 'Appetizers',
@@ -340,13 +340,13 @@ exports.seed = function(knex) {
                         type: 'drink'
                     },
                     {
-                        price: '$9.75', 
-                        product: 'Margarita',
+                        price: '$9', 
+                        product: '5oz whine & red wine',
                         type: 'drink'
                     },
                     {
-                        price: '$9', 
-                        product: '5oz whine & red wine',
+                        price: '$9.75', 
+                        product: 'Margarita',
                         type: 'drink'
                     },
                     {
@@ -374,8 +374,107 @@ exports.seed = function(knex) {
                         type: 'drink'
                     },
                     {
+                        price: '$9', 
+                        product: 'Cocktails',
+                        type: 'drink'
+                    },
+                    {
                         price: '$30', 
                         product: 'Bottle of red or white wine',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$10',
+                        product: 'Appetizers. Our favorite: crispy brussell sprouts',
+                        type: 'food'
+                    }
+                ])
+            },
+            {
+                id: 13,
+                place_id: 13,
+                day_of_week: 'Monday, Tuesday, Wednesday, Thursday, Friday',
+                start_time: '15:00',
+                end_time: '18:00',
+                item: JSON.stringify([
+                    {
+                        price: '$5', 
+                        product: 'Draft beer',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$10', 
+                        product: 'Cocktails',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$12', 
+                        product: 'Pizzas. Our favorites: pesto shrimp and coppa & smoked gouda ',
+                        type: 'food'
+                    },
+                    
+                ])
+            },
+            {
+                id: 13,
+                place_id: 13,
+                day_of_week: 'Monday, Tuesday, Wednesday, Thursday, Friday',
+                start_time: '15:00',
+                end_time: '18:00',
+                item: JSON.stringify([
+                    {
+                        price: '$5', 
+                        product: 'Draft beer',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$10', 
+                        product: 'Cocktails',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$12', 
+                        product: 'Pizzas. Our favorites: pesto shrimp and coppa & smoked gouda ',
+                        type: 'food'
+                    },
+                    
+                ])
+            },
+            {
+                id: 14,
+                place_id: 14,
+                day_of_week: 'Monday, Tuesday, Wednesday, Thursday, Friday',
+                start_time: '15:00',
+                end_time: '18:00',
+                item: JSON.stringify([
+                    {
+                        price: '$5.50', 
+                        product: 'Draft beer',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$7.50', 
+                        product: '6oz red & white wine',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$7.50', 
+                        product: 'Appetizers',
+                        type: 'food'
+                    },
+                    
+                ])
+            },
+            {
+                id: 15,
+                place_id: 15,
+                day_of_week: 'Monday, Tuesday, Wednesday, Thursday, Friday',
+                start_time: '15:00',
+                end_time: '18:00',
+                item: JSON.stringify([
+                    {
+                        price: '$6.50', 
+                        product: 'Draft beer & highballs',
                         type: 'drink'
                     },
                     {
@@ -383,12 +482,200 @@ exports.seed = function(knex) {
                         product: 'Cocktails',
                         type: 'drink'
                     },
+                ])
+            },
+            {
+                id: 16,
+                place_id: 16,
+                day_of_week: 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday',
+                start_time: '15:00',
+                end_time: '19:00',
+                item: JSON.stringify([
                     {
-                        price: '$10',
-                        product: 'Appetizers. Our favorite: crispy brussell sprouts',
+                        price: '$5', 
+                        product: 'House lager, Sol bottle & highballs',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$7', 
+                        product: 'Margarita',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$7', 
+                        product: 'Chips & guacamole',
                         type: 'food'
                     },
-        
+                    {
+                        price: '$9.95', 
+                        product: 'Coxinha',
+                        type: 'food'
+                    },
+                    {
+                        price: '$14.95', 
+                        product: 'Burrito/enchilada ',
+                        type: 'food'
+                    },
+                ])
+            },
+            {
+                id: 17,
+                place_id: 17,
+                day_of_week: 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday',
+                start_time: '15:00',
+                end_time: '18:00',
+                item: JSON.stringify([
+                    {
+                        price: '$6', 
+                        product: 'Draft beer',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$8', 
+                        product: '5oz red & white house wine',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$9', 
+                        product: 'daily cocktail',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$3', 
+                        product: 'Oyster',
+                        type: 'food'
+                    },
+                    {
+                        price: '$12', 
+                        product: 'Katsu sando sliders',
+                        type: 'food'
+                    },
+                    {
+                        price: '$14', 
+                        product: 'Crispy chicken sandwich',
+                        type: 'food'
+                    },
+                    {
+                        price: '$16', 
+                        product: 'Cumim and miso mussels',
+                        type: 'food'
+                    },
+                    
+                ])
+            },
+            {
+                id: 18,
+                place_id: 18,
+                day_of_week: 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday',
+                start_time: '15:00',
+                end_time: '18:00',
+                item: JSON.stringify([
+                    {
+                        price: '$5', 
+                        product: 'Draft beer & shots',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$8', 
+                        product: 'Sangria',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$10', 
+                        product: 'Frozen bellini, frozen lime strawberry margarita',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$12', 
+                        product: 'Chicken, fish & beef sliders/chicken, pork & veggie tacos',
+                        type: 'food'
+                    },
+                    
+                ])
+            },
+            {
+                id: 19,
+                place_id: 19,
+                day_of_week: 'Monday, Tuesday, Wednesday, Thursday, Friday',
+                start_time: '16:00',
+                end_time: '18:00',
+                item: JSON.stringify([
+                    {
+                        price: '$6.50', 
+                        product: 'Draft beer',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$10', 
+                        product: 'Cocktails',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$3',
+                        product: 'Steam pork bun',
+                        type: 'food'
+                    },
+                    {
+                        price: '$9',
+                        product: 'Fries',
+                        type: 'food'
+                    },
+                    {
+                        price: '$15',
+                        product: 'Burger',
+                        type: 'food'
+                    },
+                    {
+                        price: '$27',
+                        product: 'Steak frites',
+                        type: 'food'
+                    }
+                    
+                ])
+            },
+            {
+                id: 20,
+                place_id: 20,
+                day_of_week: 'Monday, Tuesday, Wednesday, Thursday, Friday',
+                start_time: '14:00',
+                end_time: '17:00',
+                item: JSON.stringify([
+                    {
+                        price: '$7', 
+                        product: 'Draft beer',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$10', 
+                        product: 'Sparkling, white & red house wines',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$13', 
+                        product: 'Spritz',
+                        type: 'drink'
+                    },
+                    {
+                        price: '$2.50', 
+                        product: 'Oyster',
+                        type: 'food'
+                    },
+                    {
+                        price: '$5', 
+                        product: 'Taco',
+                        type: 'food'
+                    },
+                    {
+                        price: '$16', 
+                        product: 'Calamari',
+                        type: 'food'
+                    },
+                    {
+                        price: '$17', 
+                        product: '1pc rockfish & chips',
+                        type: 'food'
+                    }
+                    
                 ])
             }
         ]);
