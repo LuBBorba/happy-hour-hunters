@@ -10,7 +10,7 @@ exports.up = function(knex) {
     table.string('contact_info').notNullable();
     table.string('website').notNullable();
 
-  })
+  });
 };
 
 /**

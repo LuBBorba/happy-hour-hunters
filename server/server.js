@@ -3,6 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
 const knex = require('./knex');
+const dealsRoutes = require('./routes/deals'); // Updated to use 'deals.js'
 require('dotenv').config();
 
 app.use(cors());
@@ -13,6 +14,9 @@ const PORT = process.env.PORT || 5050;
 app.get('/', (req, res) => {
     res.send('Hello, this is the server side!');
 });
+
+// Use the deals routes
+app.use('/', dealsRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

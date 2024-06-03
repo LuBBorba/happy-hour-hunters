@@ -122,6 +122,6 @@ exports.seed = function(knex){
                 contact_info: '(604)685-7337',
                 website:'https://www.papisoysterbar.com/',
             }
-        ])
-    })
-}
+        ]);
+    });
+};

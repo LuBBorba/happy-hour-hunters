@@ -11,7 +11,7 @@ exports.up = function(knex) {
         table.time('start_time').notNullable();
         table.time('end_time').notNullable();
         table.json('item').notNullable();    
-      })
+      });
 };
 
 /**
