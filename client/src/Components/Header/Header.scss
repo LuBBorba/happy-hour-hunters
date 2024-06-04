@@ -1,0 +1,25 @@
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/global';
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors' as *;
+
+
+.header {
+    display: flex;
+
+    &__logo {
+        height: 32vw;
+        position: relative;
+        top: 1rem;
+
+        @include tablet {
+            top: 2rem;
+        }
+    }
+
+    &__title {
+        color: $color-three;
+        font-family: 'Catamaran';
+
+    }
+}

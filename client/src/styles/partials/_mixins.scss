@@ -31,6 +31,9 @@
   @mixin main-text {
     font-size: 2.25rem;
     color: $color-three;
+    font-family: 'Catamaran';
+    font-weight: 500;
+
   }
 
   @mixin label-button {
