@@ -10,10 +10,16 @@
     &__logo {
         height: 32vw;
         position: relative;
-        top: 1rem;
+        top: 0rem;
+        left: 1rem;
+        z-index: 1;
 
         @include tablet {
-            top: 2rem;
+            height: 22vw;
+        }
+
+        @include desktop {
+            height: 18vw;
         }
     }
 

@@ -9,9 +9,12 @@
     height: 60vw;
     background-repeat: round;
     border-radius: 0.3125rem;
+    position: relative;
+    bottom: 1rem;
 
     @include tablet {
         height: 53vw;
         background-size: cover;
+        bottom: 2rem;
     }
 }
