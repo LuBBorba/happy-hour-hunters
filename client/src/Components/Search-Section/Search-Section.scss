@@ -21,25 +21,77 @@
 .form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     
     &__box {
-        background-color: $color-four;
         border-radius: $border-radius;
         width: fit-content;
-        margin-bottom: 2rem;
+        margin: 1rem 0 2rem 0;
     }
 
     &__label {
         @include label-button;
-        padding:0.5rem 1rem;  
+        padding:0.5rem;  
+        font-family: $primary-font; //add font to mixin and delete from here
+    
+    }
+
+    &__container {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
         font-family: $primary-font;
     }
 
     &__input {
-        margin-bottom: hide;
+        cursor: pointer;
+        padding: 0.5rem;
+        font-family: $primary-font;
+        border-radius: $border-radius;
+
+        &:focus {
+            border-color: $color-five;
+            outline: none;
+        }
+
+        &:active {
+            border: 2px solid $color-three;
+        }
+
+        &:default {
+            border: 2px solid $color-three;
+        }
     }
 
-    &__container {
-        position: relative;
+    &__option {
+        cursor: pointer;
+        color:$color-three;
+        font-family: $primary-font;
+        padding: 0.5rem;
+
+        &:hover {
+            background-color: $color-two;
+        }
     }
+
+    &__button {
+        margin-top: 1rem;
+        @include label-button;
+        cursor: pointer;
+        font-family: $primary-font;
+        padding:0.5rem 1rem;  
+        border: 1px solid $color-four;
+        font-size: 1rem;
+        box-shadow: 4px 1px 10px $color-five;
+
+        &:hover {
+            background-color: $color-three;
+        }
+    }
+
+    
+}
+
+.div {
+    height: 10rem;
 }
