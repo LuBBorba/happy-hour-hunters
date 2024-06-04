@@ -1,6 +1,17 @@
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/global';
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors' as *;
+
 
 .hero {
     background-image: url(../../assets/images/hero-image4.jpg);
-    height: 50vw;
+    height: 60vw;
     background-repeat: round;
+    border-radius: 0.3125rem;
+
+    @include tablet {
+        height: 53vw;
+        background-size: cover;
+    }
 }
