@@ -1,8 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const { getDeals } = require('../controllers/dealsController');
+const { getPlacesByDay } = require('../controllers/dealsController');
 
-// Define the route for fetching deals
-router.get('/deals', getDeals);
+router.get('/deals/:day_of_week', async (req, res) => {
+    try {
+        await getPlacesByDay(req, res);
+    } catch (err) {
+        res.status(400).send(`Error retrieving places: ${err.message}`);
+    }
+});
 
 module.exports = router;

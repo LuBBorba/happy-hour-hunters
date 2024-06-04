@@ -416,31 +416,6 @@ exports.seed = function(knex) {
                 ])
             },
             {
-                id: 13,
-                place_id: 13,
-                day_of_week: 'Monday, Tuesday, Wednesday, Thursday, Friday',
-                start_time: '15:00',
-                end_time: '18:00',
-                item: JSON.stringify([
-                    {
-                        price: '$5', 
-                        product: 'Draft beer',
-                        type: 'drink'
-                    },
-                    {
-                        price: '$10', 
-                        product: 'Cocktails',
-                        type: 'drink'
-                    },
-                    {
-                        price: '$12', 
-                        product: 'Pizzas. Our favorites: pesto shrimp and coppa & smoked gouda ',
-                        type: 'food'
-                    },
-                    
-                ])
-            },
-            {
                 id: 14,
                 place_id: 14,
                 day_of_week: 'Monday, Tuesday, Wednesday, Thursday, Friday',

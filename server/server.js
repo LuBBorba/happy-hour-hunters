@@ -2,8 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
-const knex = require('./knex');
-const dealsRoutes = require('./routes/deals'); // Updated to use 'deals.js'
+const dealsRoutes = require('./routes/deals');
 require('dotenv').config();
 
 app.use(cors());
@@ -16,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 // Use the deals routes
-app.use('/', dealsRoutes);
+app.use('/api', dealsRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
