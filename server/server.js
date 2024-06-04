@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 // Use the deals routes
-app.use('/api', dealsRoutes);
+app.use('/', dealsRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
