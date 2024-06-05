@@ -6,13 +6,10 @@
 
 .header {
     display: flex;
+    align-items: center;
 
     &__logo {
         height: 32vw;
-        position: relative;
-        top: 0rem;
-        left: 1rem;
-        z-index: 1;
 
         @include tablet {
             height: 22vw;
@@ -26,6 +23,17 @@
     &__title {
         color: $color-three;
         font-family: 'Catamaran';
+        font-size: 1.2rem;
+        padding-left: 1rem;
+
+        @include tablet {
+            font-size: 2.5rem;
+            padding-left: 7rem;
+        }
+
+        @include desktop {
+            padding-left: 15rem;
+        }
 
     }
 }
