@@ -2,7 +2,7 @@ const knex = require('../knex');
 
 // Function to get places with deals on a specific day of the week
 const getPlacesByDay = async (req, res) => {
-    const { day_of_week } = req.query;
+    const day_of_week = req.params.day_of_week;
     if (!day_of_week) {
         return res.status(400).json({ error: 'day_of_week query parameter is required' });
     }
