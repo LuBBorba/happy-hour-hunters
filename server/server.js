@@ -11,10 +11,10 @@ app.use(bodyParser.json());
 const PORT = process.env.PORT || 5050;
 
 app.get('/', (req, res) => {
-    res.send('Hello, this is the server side!');
+    res.send('Server working fine!');
 });
 
-// Use the deals routes
+
 app.use('/', dealsRoutes);
 
 app.listen(PORT, () => {
