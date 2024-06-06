@@ -39,9 +39,11 @@
 
   @mixin label-button {
     background-color: $color-four;
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: white;
     border-radius: $border-radius;
+    font-family: $primary-font;
+    border: 1px solid $color-four;
   }
 
 
