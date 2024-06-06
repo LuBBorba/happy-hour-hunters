@@ -7,17 +7,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <Router>
+      <Header />
       <Routes>
         <Route path="/" element={
           <>
-            <Header />
             <Hero />
             <Search />
           </>
         } />
         <Route path="/deals" element={
           <>
-            <Header />
             <Hero />
             <Search />
           </>

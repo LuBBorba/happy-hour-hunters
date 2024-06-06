@@ -1,36 +1,35 @@
 import { useState } from 'react';
 import './Search-Section.scss';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Search() {
-
     const [selectedDay, setSelectedDay] = useState('');
     const [deals, setDeals] = useState([]);
+    const navigate = useNavigate();
 
     const handleDayChange = (event) => {
-        setSelectedDay(event.target.value)
-    }
+        setSelectedDay(event.target.value);
+    };
 
-    const handleSearchClick = async ()=> {
-       try {
-        const response = await axios.get(`http://localhost:8080/deals/${selectedDay}`);
-        console.log(response);
-        if (Array.isArray(response.data)){setDeals(response.data);}
-        else {setDeals([])
-            console.erro('unexpected response')
+    const handleSearchClick = async () => {
+        try {
+            const response = await axios.get(`http://localhost:8080/deals/${selectedDay}`);
+            console.log(response);
+            if (Array.isArray(response.data)) {
+                setDeals(response.data);
+                navigate('/deals');
+            } else {
+                setDeals([]);
+                console.error('Unexpected response');
+            }
+        } catch (error) {
+            console.error('Error fetching deals', error);
         }
-        
-        
-       }
-       catch (error){
-        console.error('Error fetching deals',error);
-       }
-    }
+    };
 
     return (
-        <section className="search" >
-            <h1 className="search__header">You`re in for a treat! Find out the best deals for the happiest time of the day</h1>
+        <section className="search">
             <form className="form" id="form" onSubmit={(e) => e.preventDefault()}>
                 <div className='form__box'>
                     <label className="form__label" htmlFor="daySelect">Select a Day</label>
@@ -45,37 +44,40 @@ export default function Search() {
                         <option className="form__option" value="Saturday">Saturday</option>
                         <option className="form__option" value="Sunday">Sunday</option>
                     </select>
-                    <button onClick={handleSearchClick} className="form__button" type="button" >Search</button>
+                    <button onClick={handleSearchClick} className="form__button" type="button">Search</button>
                 </div>
             </form>
-            <Link to="/deals"><div className='div' >
-            {/* {deals.length>0? <Cards deals={deals}/>:(<p>Select a Day to see Deals</p>)} */}
-            {deals.map((deal)=> (
-                
-                <div key={deal.place_id} className="card__place">
-                    <h2 >{deal.place_name}</h2>
-                    <p>Address: {deal.address}</p>
-                    <p>Contact: {deal.contact_info}</p>
-                    <p>Website:{" "} 
-                    <a href={deal.website} target='_blank' rel='noreferrer noopener'>{deal.website}</a></p>
-                    <p>Day of Week: {deal.day_of_week}</p>
-                    <p>Time: {deal.start_time} - {deal.end_time}</p>
-                    <div>
-                        <h3>Item</h3>
-                        <ul>
-                            {deal.item.map((item,index) => (
-                                <li key={index}>{item.price} ({item.type}) - {item.product} </li>
-                            ))}
-                        </ul>
+            <div className='space'>
+                {deals.map((deal) => (
+                    <div key={deal.place_id} className="card">
+                        <h2 className='card__place'>{deal.place_name}</h2>
+                        <h3 className='card__title'>Address:</h3>
+                        <p className='card__details'> {deal.address}</p>
+                        <h3 className='card__title'>Contact:</h3>
+                        <p>Phone: {deal.contact_info}</p>
+                        <p>Website: <a href={deal.website} target='_blank' rel='noreferrer noopener'>{deal.website}</a></p>
+                        <h3 className='card__title'>Days:</h3>
+                        <p>{deal.day_of_week}</p>
+                        <h3 className='card__title'>Time: </h3>
+                        <p>{deal.start_time} - {deal.end_time}</p>
+                        <div>
+                            <h3>Drink Items</h3>
+                            <ul>
+                                {deal.item.filter(item => item.type === 'drink').map((item, index) => (
+                                    <li key={index}>{item.price} - {item.product}</li>
+                                ))}
+                            </ul>
+                            <h3>Food Items</h3>
+                            <ul>
+                                {deal.item.filter(item => item.type === 'food').map((item, index) => (
+                                    <li key={index}>{item.price} - {item.product}</li>
+                                ))}
+                            </ul>
+                            
+                        </div>
                     </div>
-                </div>
-                
-            )
-
-            )}  
-            </div></Link>
-                    
-
+                ))}
+            </div>
         </section>
-    )
+    );
 }
