@@ -16,8 +16,9 @@
 }
 
 @mixin card-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: $color-three;
+    font-family: 'Catamaran', 'Cambria';
 }
 
 @mixin card {
@@ -42,3 +43,5 @@
     color: white;
     border-radius: $border-radius;
   }
+
+
