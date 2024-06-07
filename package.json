@@ -6,6 +6,8 @@
     "client": "npm start --prefix client",
     "server": "npm run dev --prefix server",
     "dev": "concurrently \"npm run client\" \"npm run server\""
-}
-
+  },
+  "dependencies": {
+    "knex": "^3.1.0"
+  }
 }
