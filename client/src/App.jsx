@@ -3,6 +3,7 @@ import Header from './Components/Header/Header';
 import Hero from './Components/Hero/Hero';
 import Search from './Components/Search-Section/Search-Section';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollButton from './Components/ScrollButton/ScrollButton';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <>
             <Hero />
             <Search />
+            < ScrollButton />
           </>
         } />
       </Routes>

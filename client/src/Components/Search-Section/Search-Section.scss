@@ -41,9 +41,10 @@
 
     &__input {
         cursor: pointer;
-        padding: 0.5rem;
+        padding: 0.5rem 1rem;
         font-family: $primary-font;
         border-radius: $border-radius;
+        margin: 2rem;
         
         &:focus {
             border-color: $color-five;
@@ -86,52 +87,3 @@
         }
     }
 }
-
-.card-container {
-    min-height: 10rem;
-    display: flex;
-    flex-direction: column;
-    margin:1rem 2rem;
-
-    @include tablet {
-        flex-wrap: wrap;
-        flex-direction: row;
-        margin-right: 1.5rem;
-
-    }
-    
-}
-
-.card {
-    border-radius: $border-radius;
-    background-color: $color-two;
-    margin-bottom: 1rem;
-    padding: 0.5rem 1rem .5rem;
-    box-shadow: 4px 2px 10px $color-five;
-    
-    @include tablet {
-        max-width: 20rem;
-        margin: 2rem 1rem 2rem 6rem;
-    }
-    
-    &__place {
-        @include card-title;
-        font-size: 1.7rem;
-    }
-
-    &__title {
-        @include card-title;
-        margin-top: 0.5rem;
-    }
-
-    &__details {
-        font-family: 'Catamaran';
-        color:$color-three;
-        font-size: 1rem;
-    }
-}
-
-ul {
-    list-style-image: url('../../assets/images/arrow.png');
-}
-

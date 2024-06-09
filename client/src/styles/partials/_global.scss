@@ -8,21 +8,29 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+body,
+html {
+  min-width: 100%;
+  margin: 0rem;
+  padding: 0rem;
   background-color: $color-one;
   font-family: 'Catamaran', 'Cambria';
+  overflow-x: hidden;
 }
+
 
 h1,
 h3,
 p {
-  margin: 0;
-  padding: 0;
+  margin: 0rem;
+  padding: 0rem;
 }
 
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
