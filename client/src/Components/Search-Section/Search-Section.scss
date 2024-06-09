@@ -40,9 +40,7 @@
     }
 
     &__input {
-        cursor: pointer;
-        padding: 0.5rem 1rem;
-        font-family: $primary-font;
+        @include dropdown;       
         border-radius: $border-radius;
         margin: 2rem;
         
@@ -61,10 +59,7 @@
     }
 
     &__option {
-        cursor: pointer;
-        color:$color-three;
-        font-family: $primary-font;
-        padding: 0.5rem;
+        @include dropdown;  
 
         &:hover {
             background-color: $color-two;
@@ -72,11 +67,7 @@
     }
 
     &__button {
-        @include label-button;
-        cursor: pointer;
-        padding:0.5rem 1.2rem;  
-        box-shadow: 4px 1px 10px $color-five;
-        margin: 1rem 0 2rem;
+        @include label-button;       
 
         &:hover {
             background-color: $color-three;

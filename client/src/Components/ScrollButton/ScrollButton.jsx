@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './ScrollButton.scss'; 
 import Arrow from '../../assets/images/up-arrow2.png';
 

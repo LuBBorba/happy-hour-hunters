@@ -1,6 +1,5 @@
 const knex = require('../knex');
 
-// Function to get places with deals on a specific day of the week
 const getPlacesByDay = async (req, res) => {
     const day_of_week = req.params.day_of_week;
     if (!day_of_week) {
@@ -20,10 +19,10 @@ const getPlacesByDay = async (req, res) => {
                 'deals.end_time',
                 'deals.item'
             )
-            .whereRaw('FIND_IN_SET(?, REPLACE(deals.day_of_week, " ", ""))', [day_of_week]); //FIND to find day in the string day, REPLACE to delete blank space between week days.
+            .whereRaw('FIND_IN_SET(?, REPLACE(deals.day_of_week, " ", ""))', [day_of_week]);
 
             
-        // Parse the 'item' field from JSON string to JSON object
+      
         const formattedPlaces = places.map(place => {
             return {
                 ...place,

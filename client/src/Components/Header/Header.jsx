@@ -7,7 +7,7 @@ export default function Header () {
     return ( 
     
     <header className='header'>
-        <img className='header__logo' src={Logo} alt="" />
+        <img className='header__logo' src={Logo} alt="Happy Hour Hunters Logo" />
         <h1 className='header__title'>Happy Hour Hunters</h1>
     </header>
 

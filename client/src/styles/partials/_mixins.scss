@@ -18,7 +18,7 @@
 @mixin card-title {
     font-size: 1.2rem;
     color: $color-three;
-    font-family: 'Catamaran', 'Cambria';
+    font-family: $primary-font;
 }
 
 @mixin card {
@@ -32,7 +32,7 @@
   @mixin main-text {
     font-size: 2rem;
     color: $color-three;
-    font-family: 'Catamaran';
+    font-family: $primary-font;
     font-weight: 500;
 
   }
@@ -44,6 +44,18 @@
     border-radius: $border-radius;
     font-family: $primary-font;
     border: 1px solid $color-four;
+    cursor: pointer;
+    padding:0.5rem 1.2rem;  
+    box-shadow: 4px 1px 10px $color-five;
+    margin: 1rem 0 2rem;
+  }
+
+  @mixin dropdown {
+    font-family: $primary-font;
+    font-weight: 500;
+    color: $color-three;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
   }
 
 
